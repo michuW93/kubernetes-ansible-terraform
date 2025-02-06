@@ -9,3 +9,5 @@ Pod is shared execution env and shared execution env is basically collection of 
 scaling in kubernetes is about adding removing pods, not about adding contatiners into pod
 
 pod life cycle: PENDING, RUNNING, SUCCEEDED/FAILED
+
+only healthy Pods will have traffic
