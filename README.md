@@ -26,3 +26,5 @@ Ansible Competitors: Puppet, Terraform
 Infrastructure as Code (IaC):
 This is the process of managing and provisioning IT infrastructure through machine‑readable, and I submit human‑readable definition files. And the idea is **instead of manual processes that you do over and over and over again**, like installing and configuring the NGINX web server on some Ubuntu hosts, **we use code files that are in say, a YAML format that declaratively describe the desired configuration of those manage nodes**. 
 And the benefit there is that once your playbook is in place and it's working, you can run that over and over and over again and never worry about something like human error, human memory failures and that kind of thing.
+
+How to check if ansible is installed? ansible --version
