@@ -28,3 +28,8 @@ This is the process of managing and provisioning IT infrastructure through machi
 And the benefit there is that once your playbook is in place and it's working, you can run that over and over and over again and never worry about something like human error, human memory failures and that kind of thing.
 
 How to check if ansible is installed? ansible --version
+
+ansible-config -> this is just going to dump all of the current settings in your config file. And notice that it's just giving us a simple list of key value pairs.
+there is e.g DEFAULT_HOST_LIST which shows config which ansible is using
+
+ansible web -m ping -v - way to check connectivity to those remote hosts
