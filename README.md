@@ -33,3 +33,17 @@ ansible-config -> this is just going to dump all of the current settings in your
 there is e.g DEFAULT_HOST_LIST which shows config which ansible is using
 
 ansible web -m ping -v - way to check connectivity to those remote hosts
+
+Ansible is a Python application, so both your control node, as well as your managed nodes are going to need to have Python installed.
+
+Two distributions:
+* ansible-core - just the essentials: command-line tools and essential modules
+* ansible: everything with collections of modules, plugins, and roles
+
+you can set up a Windows Server or even a Windows client machine as an Ansible control node, the Ansible command‑line tools are Linux only, so you're going to have to set up Windows Subsystem for Linux, or WSL, on your Windows machine and then install Ansible in your WSL environment
+
+
+
+The first thing Ansible will look at on your server is the presence of an environment variable in memory called ansible_config, and that would be a path to an ansible.cfg configuration file. If you don't have that environment variable set, the next place Ansible looks is in the current directory
+
+a playbook is simply a YAML file that defines a configuration
