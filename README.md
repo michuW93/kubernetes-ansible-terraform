@@ -56,3 +56,13 @@ To create custom modules (units of code that control system resources of execute
 Ansible Galaxy is a public/private repository. It's at galaxy.ansible.com
 
 What we're talking about here is a business who has a number of Playbooks and you're finding that instead of deploying the Playbooks one by one by one, you want to bundle them together so that when you're setting up servers and managing servers, you can do everything from one spot. And there's two levels of abstraction. The highest level of abstraction is an artifact called a collection, and the collection consists of one or more roles
+
+ Running ansible playbooks:
+ * ansible-playbook cli command
+ * CI/CD pipelines
+ * scheduled cron jobs
+ * automation controller/WX
+ * ansible-pull command
+ * container orchestrations (Kubernetes)
+
+use Ansible Vault and an encrypted secrets.yml file to store passwords and API keys in playbooks securely
