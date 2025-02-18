@@ -16,7 +16,7 @@ only healthy Pods will have traffic
 
 # ansible
 
-Base on Tim Warner tutorial
+Base on **Tim Warner** tutorial
 
 Configuration Management (CM) - CM is the process of systematically managing, organizing, and controlling changes in your information technology or IT system. CM helps in establishing and maintaining consistency of your system's performance as well as its attributes.
 It's annoying when you check the system state of a server and find that it's deviated from where you need it to be, its desired state. CM platforms allow you to anchor that consistency and if a server does happen to drift out of its desired state, we can have the configuration management system bring it back.
@@ -46,4 +46,13 @@ you can set up a Windows Server or even a Windows client machine as an Ansible c
 
 The first thing Ansible will look at on your server is the presence of an environment variable in memory called ansible_config, and that would be a path to an ansible.cfg configuration file. If you don't have that environment variable set, the next place Ansible looks is in the current directory
 
-a playbook is simply a YAML file that defines a configuration
+a playbook is simply a text-based YAML file that defines a configuration. Playbook is a YAML task automation script. It's critically important that you think about Ansible and its Playbooks as being both declarative and idempotent
+So, from now on the idea is once you have your nGINX web server installation and configuration Playbook all debugged and ready to rock, you can use it from now to perpetuity and not have to worry about human error forgetting stuff because if it's encapsulated in the Playbook, it will happen. And I hope that you're keeping your Playbooks, like all the rest of your Ansible source files, in version control
+
+![image](https://github.com/user-attachments/assets/39cd37ba-9286-44f0-a508-c85f7c4db68c)
+
+To create custom modules (units of code that control system resources of execute system commands on local and remote nodes e.g copy or lookup) or plugins(units of code that extend Ansible core functionality) you need to know Python.
+
+Ansible Galaxy is a public/private repository. It's at galaxy.ansible.com
+
+What we're talking about here is a business who has a number of Playbooks and you're finding that instead of deploying the Playbooks one by one by one, you want to bundle them together so that when you're setting up servers and managing servers, you can do everything from one spot. And there's two levels of abstraction. The highest level of abstraction is an artifact called a collection, and the collection consists of one or more roles
