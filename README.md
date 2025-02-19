@@ -66,3 +66,11 @@ What we're talking about here is a business who has a number of Playbooks and yo
  * container orchestrations (Kubernetes)
 
 use Ansible Vault and an encrypted secrets.yml file to store passwords and API keys in playbooks securely
+
+Variables in ansible: A variable in Ansible is the same as a variable in any other programming or scripting language, it's a placeholder
+example with YAML syntax: 
+```install_path: /opt/myapp```
+referencing a variable:
+```- dest: '{{ install_path }}/foo.cfg'
+
+Ansible has a totally separate set of built‑in modules for Windows. So **user** is the Python script that's used with Linux environments, **win_user** is the one used with Windows, you see, because Ansible on Windows is totally different inasmuch as it doesn't use SSH for transport, it uses WinRM and WSMAN.
