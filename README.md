@@ -74,3 +74,9 @@ referencing a variable:
 ```- dest: '{{ install_path }}/foo.cfg'
 
 Ansible has a totally separate set of built‑in modules for Windows. So **user** is the Python script that's used with Linux environments, **win_user** is the one used with Windows, you see, because Ansible on Windows is totally different inasmuch as it doesn't use SSH for transport, it uses WinRM and WSMAN.
+
+An Ansible role is a reusable standalone component that encapsulates a set of Ansible tasks and configurations. I would suggest that you think of roles as the rough equivalent of functions in a traditional programming language, so you're encapsulating logic.
+we use ansible‑galaxy init to create and scaffold the new role in your target directory
+
+
+An Ansible template is a file that contains configuration parameters, but it's dynamic. The dynamic values get plugged in from your Ansible playbooks or from your other artifacts, like inventory, variable file. Templates use the Jinja2 templating language.
