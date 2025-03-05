@@ -121,3 +121,9 @@ food pizza "pizza" {
 ```
 here we declare what we want and we leave it to software to figure out exactly how to implement what I want.
 
+State data - once resources have been created, Terraform likes to keep track of what's going on, so it maintains state data which contains the current information about your deployment. It's a mapping of what you've defined in your configuration to what exists in the target environment. When you want to do an update of your environment, Terraform essentially compares your updated config to what's in the state file, calculates the changes to make the state match config, and makes the changes in the target environment, finally updating the state data.
+
+Installing Terraform is simple:
+* download executable for your platform
+* Add yo your PATH environment variable
+Terraform is also available in common package managers like apt and Chocolatey
