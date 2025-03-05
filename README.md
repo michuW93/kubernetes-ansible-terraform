@@ -80,3 +80,44 @@ we use ansible‑galaxy init to create and scaffold the new role in your target 
 
 
 An Ansible template is a file that contains configuration parameters, but it's dynamic. The dynamic values get plugged in from your Ansible playbooks or from your other artifacts, like inventory, variable file. Templates use the Jinja2 templating language.
+
+# terraform
+
+Base on **Ned Bellavance** tutorial
+
+Infrastructure as Code is provisioning infrastructure through software to achieve consistent and predictable environments.
+A few that I want to call out is the fact that this is all being done through code and software. It's not a manual process. And the goal here is to achieve consistency. That means every time you use code to deploy infrastructure, it does so in a consistent way and that the environment you get at the end is predictable.
+
+Benefits of IaaC?
+* One big benefit is the reusability of your code. Once you've figured out how to properly deploy, say, a database server for a particular application, you can take the code for that database server deployment and reuse it in any other application that needs a similar database server back end. Having those reusable components will make your life a lot easier
+* Defining your Infrastructure as Code opens the door to automation. You're no longer clicking around in a portal or banging out commands at a terminal. You can take your Infrastructure as Code and integrate it with an automation process or pipeline with well‑defined inputs and outputs
+
+Core concepts:
+* It's defined in code,
+* stored in source control e.g GitLab
+* it's declarative or imperative,
+* idempotent(Terraform attempts to be idempotent in the sense that if you haven't changed anything about your configuration and you apply it again to the same environment, nothing will change in the environment because your defined configuration matches the reality of the infrastructure that exists) and consistent (Each time you do something, the results should be the same).
+
+Terraform is an example of a declarative approach to deploying insfrastructure as code.
+Declarative means to tell what I want, not how to do it.
+Example with pizza. In imperative way it would be:
+```
+get pizza dough
+get cheese
+get ham
+
+put cheese on the pizza dough
+put ham on the cheese
+```
+
+so here you must tell what to do and how to do.
+In declarative way it would be:
+```
+food pizza "pizza" {
+ ingrediens = [
+  "pizza dough", "chesse", "ham"
+ ]
+}
+```
+here we declare what we want and we leave it to software to figure out exactly how to implement what I want.
+
